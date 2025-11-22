@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Latihan Dengan Objek Radio</title>
+</head>
+
+<style>
+.btn-custom {
+        display: inline-block;
+        padding: 10px 18px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        border: 1px solid #0056b3;
+        font-family: Arial;
+        font-size: 14px;
+    }
+    .btn-custom:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body>
+
+<script language="JavaScript">
+function radio_box(form)
+{
+    var ket = "";
+
+    if (form.gender.value == "wanita") {
+        ket = "Wanita";
+    } else if (form.gender.value == "pria") {
+        ket = "Pria";
+    } else {
+        ket = "Gak Jelas";
+    }
+
+    alert("Anda adalah seorang " + ket);
+}
+</script>
+
+<h1>Memasukkan Data Dengan Objek Radio</h1><hr>
+
+<form>
+    <p>
+        <input type="radio" value="wanita" name="gender"> Wanita<br>
+        <input type="radio" value="pria" name="gender"> Pria
+    </p>
+
+    <hr>
+
+    <p>
+        <input type="button" value="CONFIRM" onclick="radio_box(this.form)">
+        <input type="reset" value="RESET">
+    </p>
+</form>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="tugas.html" class="btn-custom">Kembali ke Halaman Daftar Tugas</a>
+    </div>
+</body>
+</html>
