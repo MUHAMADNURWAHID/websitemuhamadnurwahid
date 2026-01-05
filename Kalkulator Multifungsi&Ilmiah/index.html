@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Multifungsi & Ilmiah</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+
+        <div class="buttons">
+            <button class="sci" onclick="addValue('sin(')">sin</button>
+            <button class="sci" onclick="addValue('cos(')">cos</button>
+            <button class="sci" onclick="addValue('tan(')">tan</button>
+            <button class="sci" onclick="addValue('^')">^</button>
+
+            <button class="sci" onclick="addValue('(')">(</button>
+            <button class="sci" onclick="addValue(')')">)</button>
+            <button class="op" onclick="deleteOne()">DEL</button>
+            <button class="op" onclick="clearAll()">C</button>
+
+            <button onclick="addValue('7')">7</button>
+            <button onclick="addValue('8')">8</button>
+            <button onclick="addValue('9')">9</button>
+            <button class="op" onclick="addValue('/')">÷</button>
+
+            <button onclick="addValue('4')">4</button>
+            <button onclick="addValue('5')">5</button>
+            <button onclick="addValue('6')">6</button>
+            <button class="op" onclick="addValue('*')">×</button>
+
+            <button onclick="addValue('1')">1</button>
+            <button onclick="addValue('2')">2</button>
+            <button onclick="addValue('3')">3</button>
+            <button class="op" onclick="addValue('-')">−</button>
+
+            <button onclick="addValue('0')">0</button>
+            <button onclick="addValue('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+            <button class="op" onclick="addValue('+')">+</button>
+        </div>
+    </div>
+
+    <!-- HISTORY (DITINGKATKAN UI-NYA) -->
+    <div class="history">
+        <div class="history-header">
+            <h4>History</h4>
+            <button onclick="clearHistory()">Clear</button>
+        </div>
+        <ul id="historyList"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
