@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gabungan Video - Gambar - Musik</title>
+  <meta charset="UTF-8">
+
+  <style>
+    .btn-custom {
+        display: inline-block;
+        padding: 10px 18px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+
+    .btn-custom:hover {
+        background-color: #0056b3;
+        transform: translateY(-3px);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Bagian Gambar & Map Area -->
+<p>Klik pada bagian gambar sesuai dengan koordinat yang telah ditentukan:</p>
+
+<img src="photo.jpg" width="145" height="126" alt="gambarku" usemap="#picturemap">
+
+<map name="picturemap">
+  <area shape="rect" coords="0,0,82,126" href="a.htm" title="bagianA">
+  <area shape="circle" coords="90,58,3" href="b.htm" alt="bagianB">
+  <area shape="circle" coords="124,58,8" href="c.htm" alt="bagianC">
+</map>
+
+<!-- Musik -->
+<embed src="/music.mp3" loop="true" autoplay="false" width="145" height="60"></embed>
+
+<br><br>
+
+<!-- Video Dengan Tombol Kontrol -->
+<div style="text-align:center">
+  <button onclick="tekanPause()">Play/Pause</button>
+  <button onclick="menjadiBig()">Big</button>
+  <button onclick="menjadiSmall()">Small</button>
+  <button onclick="menjadiNormal()">Normal</button>
+  <br><br>
+
+  <video id="videoku" width="430">
+    <source src="Vidio.mp4" type="video/mp4">
+    <source src="Vidio.gif" type="video/gif">
+    Browser anda tidak support video HTML5.
+  </video>
+</div>
+
+<!-- Script Kontrol Video -->
+<script>
+  var VideoAku = document.getElementById("videoku");
+
+  function tekanPause() {
+    if (VideoAku.paused)
+      VideoAku.play();
+    else
+      VideoAku.pause();
+  }
+
+  function menjadiBig() {
+    VideoAku.width = 560;
+  }
+
+  function menjadiSmall() {
+    VideoAku.width = 320;
+  }
+
+  function menjadiNormal() {
+    VideoAku.width = 430;
+  }
+</script>
+
+<br>
+<a href="tugas.html" class="btn-custom">Kembali ke Halaman Daftar Tugas</a>
+
+</body>
+</html>
